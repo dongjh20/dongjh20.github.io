@@ -70,8 +70,8 @@
   color: var(--global-base-color);
   font-weight: 700;
   border-bottom: 2px solid var(--global-base-color);
-  pointer-events: none; /* Move this here */
-  cursor: default; /* Move this here too */
+  /* 移除 pointer-events: none 以允许点击当前页面链接 */
+  cursor: pointer;
 }
 
 .masthead__menu-item.selected a:hover {
