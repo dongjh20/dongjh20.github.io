@@ -174,17 +174,40 @@
     </ul>
     
     <!-- Visitor Map -->
-    <div class="author__visitor-map">
+    <div class="author__visitor-map" style="margin-top: 10px;">
       <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=dDj-xGA67d9Q2mjip_NNMEasi5aArV0ggIAF2RUWbN4&cl=ffffff&w=a"></script>
     </div>
 
     <!-- Visitor Counter -->
     <div class="author__visitor-counter" style="display: flex; justify-content: center; margin-top: 10px;">
-      <div style="transform: scale(2); transform-origin: center top; margin-bottom: 30px;">
+      <div style="transform: scale(1); transform-origin: center top;">
         <a href='https://www.counters-free.net/'>counter-FREE</a>
         <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=4c277d0cc6ac764f38e5479b1c1ad67c6d842395'></script>
         <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1468642/t/9"></script>
       </div>
+    </div>
+
+    <!-- Visitor Location (ipinfo) -->
+    <div class="author__visitor-location" style="margin-top: 15px; padding: 10px; background: #f5f5f5; border-radius: 8px; text-align: center; font-size: 14px;">
+      <i class="fas fa-fw fa-globe" aria-hidden="true"></i>
+      <span id="visitor-location">正在获取位置...</span>
+      <script>
+        fetch('https://api.ipinfo.io/lite?token=3bf43d3d868f61')
+          .then(response => response.json())
+          .then(data => {
+            const location = document.getElementById('visitor-location');
+            if (data.city && data.country) {
+              location.innerHTML = '您来自: ' + data.city + ', ' + data.country;
+            } else if (data.country) {
+              location.innerHTML = '您来自: ' + data.country;
+            } else {
+              location.innerHTML = '欢迎访问!';
+            }
+          })
+          .catch(error => {
+            document.getElementById('visitor-location').innerHTML = '欢迎访问!';
+          });
+      </script>
     </div>
   </div>
 </div>
