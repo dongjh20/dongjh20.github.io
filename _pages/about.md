@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Jianghong Dong/董江红"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
