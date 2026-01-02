@@ -34,22 +34,23 @@
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li class="author__desktop" style="position: relative;">
-          <a href="javascript:void(0)" onclick="copyEmail('{{ author.email }}', this)" style="cursor: pointer;">
+        <li class="author__desktop" style="position: relative; display: inline-flex; align-items: center;">
+          <a href="javascript:void(0)" id="email-copy-btn" style="cursor: pointer;">
             <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email
           </a>
-          <span class="copy-tooltip" style="display: none; position: absolute; left: 100%; top: 50%; transform: translateY(-50%); background: #333; color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 12px; white-space: nowrap; margin-left: 8px;">Copied!</span>
+          <span id="email-tooltip" style="display: none; background: #333; color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 12px; white-space: nowrap; margin-left: 8px;">Email copied!</span>
         </li>
         <script>
-          function copyEmail(email, el) {
+          document.getElementById('email-copy-btn').addEventListener('click', function() {
+            var email = '{{ author.email }}';
             navigator.clipboard.writeText(email).then(function() {
-              var tooltip = el.parentElement.querySelector('.copy-tooltip');
+              var tooltip = document.getElementById('email-tooltip');
               tooltip.style.display = 'inline-block';
               setTimeout(function() {
                 tooltip.style.display = 'none';
               }, 1500);
             });
-          }
+          });
         </script>
       {% endif %}
 
