@@ -1,0 +1,185 @@
+# Publication list rendered on /publications/ (see _pages/publications.html).
+#
+# Each group has a title and a list of papers. Paper fields (all optional except title):
+#   title, url (title link), authors (HTML allowed; wrap yourself in <strong>),
+#   venue, year, image or video (thumbnail), links (list of {name, url}), desc.
+# Markers: † equal contribution, * corresponding author.
+
+groups:
+  - title: "Multi-Vehicle Cooperation"
+    papers:
+      - title: "Choreographing CAV Formations on the Fly with Reflection"
+        url: "https://dongjh20.github.io/GRF-TAFC/"
+        video: "https://dongjh20.github.io/GRF-TAFC/static/videos/on-the-fly/07-shape-transformation.mp4"
+        poster: "https://dongjh20.github.io/GRF-TAFC/static/videos/on-the-fly/07-shape-transformation.jpg"
+        authors: >-
+          <strong>Jianghong Dong</strong>,
+          <a href="https://www.wenhancao.com/?lang=en">Wenhan Cao</a>,
+          <a href="https://wjiawei.com/">Jiawei Wang</a>,
+          <a href="https://scholar.google.com/citations?user=o9zHCC0AAAAJ">Yifeng Zhang</a>,
+          <a href="https://scholar.google.com/citations?user=MlK35S4AAAAJ">Mengchi Cai</a>,
+          <a href="https://scholar.google.com/citations?user=T6MoOScAAAAJ">Chaoyi Chen</a>,
+          <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>,
+          <a href="https://www.researchgate.net/profile/Jianqiang-Wang">Jianqiang Wang</a>,
+          <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ">Keqiang Li</a>,
+          <a href="https://www.marmotlab.org/bio.html">Guillaume Sartoretti</a>
+        venue: "Communications in Transportation Research"
+        year: 2026
+        links:
+          - name: "paper"
+            url: "https://www.sciopen.com/article/10.26599/COMMTR.2026.9640070"
+          - name: "project page"
+            url: "https://dongjh20.github.io/GRF-TAFC/"
+        desc: "A grounded and reflective framework that lets pretrained multimodal LLMs choreograph task-adaptive CAV formations on the fly, closing the loop between formation generation, optimization-based execution, and execution-driven reflection."
+
+      - title: "TOGIA: Task-Oriented Global-Interaction-Aware MARL Framework for Large-Scale Formation Control of CAVs"
+        url: "https://dongjh20.github.io/TOGIA/"
+        image: "https://dongjh20.github.io/TOGIA/static/images/TOIA-framework-V2.jpg"
+        authors: >-
+          <strong>Jianghong Dong</strong>,
+          <a href="https://scholar.google.com/citations?user=43xAy7MAAAAJ">Wenhan Cao</a>,
+          <a href="https://marmotlab.org/people.html">Yifeng Zhang</a>,
+          <a href="https://wjiawei.com/">Jiawei Wang</a>,
+          <a href="https://scholar.google.com/citations?user=MlK35S4AAAAJ">Mengchi Cai</a>,
+          <a href="https://scholar.google.com/citations?user=T6MoOScAAAAJ">Chaoyi Chen</a>,
+          <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>,
+          <a href="https://www.researchgate.net/profile/Jianqiang-Wang">Jianqiang Wang</a>,
+          <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ">Keqiang Li</a>
+        venue: "To appear"
+        year: 2026
+        links:
+          - name: "project page"
+            url: "https://dongjh20.github.io/TOGIA/"
+        desc: "A task-oriented, global-interaction-aware multi-agent reinforcement learning framework (CTDE) with a global critic that enables real-time formation control for large-scale CAV formations."
+
+      - title: "COIN: Collaborative Interaction-Aware Multi-Agent Reinforcement Learning for Self-Driving Systems"
+        url: "https://marmotlab.github.io/COIN/"
+        video: "https://marmotlab.github.io/COIN/static/videos/6_inter_fade.mp4"
+        authors: >-
+          <a href="https://scholar.google.com/citations?user=o9zHCC0AAAAJ">Yifeng Zhang</a>,
+          <a href="https://scholar.google.com/citations?user=bmLr54AAAAAJ">Jieming Chen</a>,
+          Tingguang Zhou,
+          <a href="https://scholar.google.com/citations?user=rTz0anAAAAAJ">Tanishq Duhan</a>,
+          <strong>Jianghong Dong</strong>*,
+          <a href="https://scholar.google.com/citations?user=t7r7tjUAAAAJ">Yuhong Cao</a>,
+          <a href="https://scholar.google.com/citations?user=n7NzZ0sAAAAJ">Guillaume Sartoretti</a>
+        venue: "Communications in Transportation Research"
+        year: 2026
+        links:
+          - name: "paper"
+            url: "https://www.sciopen.com/article/10.26599/COMMTR.2026.9640031"
+          - name: "arXiv"
+            url: "https://arxiv.org/abs/2603.24931"
+          - name: "project page"
+            url: "https://marmotlab.github.io/COIN/"
+          - name: "code"
+            url: "https://github.com/marmotlab/COIN"
+        desc: "A collaborative interaction-aware MARL framework that uses counterfactual credit assignment to coordinate multiple self-driving vehicles efficiently in dense, dynamic traffic."
+
+      - title: "STFC: Spatio-Temporal Formation Control for Connected and Autonomous Vehicles in Multi-Lane Traffic"
+        url: "https://dongjh20.github.io/Vehicle-Formation/"
+        image: "https://dongjh20.github.io/Vehicle-Formation/static/images/website-exp-scenarioV4.jpg"
+        authors: >-
+          <strong>Jianghong Dong</strong>,
+          <a href="https://wjiawei.com/">Jiawei Wang</a>,
+          <a href="https://scholar.google.com/citations?user=MlK35S4AAAAJ">Mengchi Cai</a>,
+          <a href="https://www.researchgate.net/profile/Yibin-Yang-11">Yibin Yang</a>,
+          <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>,
+          <a href="https://www.researchgate.net/profile/Jianqiang-Wang">Jianqiang Wang</a>,
+          <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ">Keqiang Li</a>
+        venue: "Communications in Transportation Research"
+        year: 2025
+        links:
+          - name: "paper"
+            url: "https://www.sciencedirect.com/science/article/pii/S2772424725000599"
+          - name: "project page"
+            url: "https://dongjh20.github.io/Vehicle-Formation/"
+        desc: "A spatio-temporal formation control method that combines centralized formation generation with distributed trajectory planning, showing that interlaced structures are optimal for multi-lane formations."
+
+  - title: "Multi-Robot Cooperation"
+    papers:
+      - title: "Distributed Formation Control for Car-Like Robots Navigating in Complex Environments"
+        url: "https://ieeexplore.ieee.org/abstract/document/11072947"
+        authors: >-
+          <strong>Jianghong Dong</strong>,
+          <a href="https://wjiawei.com/">Jiawei Wang</a>,
+          <a href="https://scholar.google.com/citations?user=MlK35S4AAAAJ">Mengchi Cai</a>,
+          <a href="https://scholar.google.com/citations?user=T6MoOScAAAAJ">Chaoyi Chen</a>,
+          <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>,
+          <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ">Keqiang Li</a>
+        venue: "IEEE ICCAR"
+        year: 2025
+        links:
+          - name: "paper"
+            url: "https://ieeexplore.ieee.org/abstract/document/11072947"
+        desc: "A distributed formation control approach for car-like robots that respects nonholonomic constraints while navigating through complex, obstacle-rich environments."
+
+  - title: "Digital Twin"
+    papers:
+      - title: "From Optimizable to Interactable: Mixed Digital Twin-Empowered Testing of Vehicle-Infrastructure Cooperation Systems"
+        url: "https://dongjh20.github.io/IMPACT/"
+        image: "https://dongjh20.github.io/IMPACT/static/images/platoon-setup.jpg"
+        authors: >-
+          <strong>Jianghong Dong</strong>,
+          Chunying Yang,
+          <a href="https://scholar.google.com/citations?user=MlK35S4AAAAJ">Mengchi Cai</a>,
+          <a href="https://scholar.google.com/citations?user=T6MoOScAAAAJ">Chaoyi Chen</a>,
+          <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>*,
+          <a href="https://www.researchgate.net/profile/Jianqiang-Wang">Jianqiang Wang</a>,
+          <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ">Keqiang Li</a>
+        venue: "Transportation Research Part C: Emerging Technologies"
+        year: 2026
+        links:
+          - name: "paper"
+            url: "https://www.sciencedirect.com/science/article/pii/S0968090X26004638"
+          - name: "arXiv"
+            url: "https://arxiv.org/abs/2603.17497"
+          - name: "project page"
+            url: "https://dongjh20.github.io/IMPACT/"
+        desc: "IMPACT extends the VICS digital twin taxonomy to an L5 'Interactable' level, letting humans interact directly with vehicle-infrastructure entities to test cooperation systems under real-world corner cases."
+
+      - title: "Multisource Human-in-the-Loop Digital Twin Testbed for Connected and Autonomous Vehicles in Mixed Traffic Flow"
+        url: "https://dongjh20.github.io/MSH-MCCT/"
+        image: "https://dongjh20.github.io/MSH-MCCT/static/images/MSH-snapshotV2.jpg"
+        authors: >-
+          <strong>Jianghong Dong</strong>,
+          Chunying Yang,
+          <a href="https://scholar.google.com/citations?user=MlK35S4AAAAJ">Mengchi Cai</a>,
+          <a href="https://scholar.google.com/citations?user=T6MoOScAAAAJ">Chaoyi Chen</a>,
+          <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>,
+          <a href="https://scholar.google.com/citations?user=5mUoFN0AAAAJ">Jianqiang Wang</a>,
+          <a href="https://wjiawei.com/">Jiawei Wang</a>,
+          <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ">Keqiang Li</a>
+        venue: "Journal of Intelligent and Connected Vehicles"
+        year: 2026
+        links:
+          - name: "paper"
+            url: "https://www.sciopen.com/article/10.26599/JICV.2026.9210084"
+          - name: "arXiv"
+            url: "https://arxiv.org/abs/2603.17751"
+          - name: "project page"
+            url: "https://dongjh20.github.io/MSH-MCCT/"
+        desc: "MSH-MCCT, a mixed digital twin testbed that brings human drivers and CAV algorithms together across physical, virtual, and mixed platforms to study CAV–HDV interactions in mixed traffic."
+
+      - title: "Mixed Cloud Control Testbed: Validating Vehicle-Road-Cloud Integration via Mixed Digital Twin"
+        url: "https://dongjh20.github.io/MCCT/"
+        image: "https://dongjh20.github.io/MCCT/resources/MCCT-architecture.jpg"
+        authors: >-
+          <strong>Jianghong Dong</strong>,
+          <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>,
+          <a href="https://wjiawei.com/">Jiawei Wang</a>,
+          Chunying Yang,
+          <a href="https://scholar.google.com/citations?user=MlK35S4AAAAJ">Mengchi Cai</a>,
+          <a href="https://scholar.google.com/citations?user=T6MoOScAAAAJ">Chaoyi Chen</a>,
+          <a href="https://www.researchgate.net/profile/Jianqiang-Wang">Jianqiang Wang</a>,
+          <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ">Keqiang Li</a>
+        venue: "IEEE Transactions on Intelligent Vehicles"
+        year: 2023
+        links:
+          - name: "paper"
+            url: "https://ieeexplore.ieee.org/abstract/document/10040234"
+          - name: "arXiv"
+            url: "https://arxiv.org/abs/2212.02007"
+          - name: "project page"
+            url: "https://dongjh20.github.io/MCCT/"
+        desc: "Proposes the Mixed Digital Twin concept and builds MCCT, a miniature testbed where physical and virtual vehicles coexist and interact to validate vehicle-road-cloud integration."

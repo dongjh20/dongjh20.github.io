@@ -5,32 +5,34 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<p class="pub-note">* corresponding author &nbsp;·&nbsp; See <a href="{{ site.author.googlescholar }}">Google Scholar</a> for the full list.</p>
 
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+{% for group in site.data.publications.groups %}
+<details class="pub-group" open>
+  <summary>{{ group.title }}</summary>
+  {% for paper in group.papers %}
+  <article class="paper">
+    {% if paper.video or paper.image %}
+    <div class="paper-media">
+      {% if paper.video %}
+      <video muted autoplay loop playsinline preload="metadata"{% if paper.poster %} poster="{{ paper.poster }}"{% endif %}><source src="{{ paper.video }}" type="video/mp4"></video>
+      {% else %}
+      <img src="{{ paper.image }}" alt="{{ paper.title }}" loading="lazy">
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+    </div>
+    {% endif %}
+    <div class="paper-body">
+      {% if paper.url %}<a class="paper-title" href="{{ paper.url }}">{{ paper.title }}</a>{% else %}<span class="paper-title">{{ paper.title }}</span>{% endif %}
+      <div class="paper-authors">{{ paper.authors }}</div>
+      <div class="paper-venue"><em>{{ paper.venue }}</em>{% if paper.year %}, {{ paper.year }}{% endif %}</div>
+      {% if paper.links %}
+      <div class="paper-links">
+        {% for link in paper.links %}<a href="{{ link.url }}">{{ link.name }}</a>{% endfor %}
+      </div>
+      {% endif %}
+      {% if paper.desc %}<p class="paper-desc">{{ paper.desc }}</p>{% endif %}
+    </div>
+  </article>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+</details>
+{% endfor %}

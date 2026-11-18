@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Publications list (/publications/)
+   ========================================================================== */
+
+.pub-note {
+  font-size: $type-size-6;
+  color: var(--global-text-color-light);
+}
+
+.pub-group {
+  margin: 1.5em 0;
+
+  > summary {
+    cursor: pointer;
+    font-size: $type-size-4;
+    font-weight: bold;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+}
+
+.paper {
+  display: flex;
+  gap: 1.2em;
+  align-items: flex-start;
+  padding: 1em 0;
+  border-bottom: 1px dashed var(--global-border-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.paper-media {
+  flex: 0 0 220px;
+
+  img,
+  video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--global-border-color);
+  }
+}
+
+.paper-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: $type-size-6;
+  line-height: 1.5;
+}
+
+.paper-title {
+  display: block;
+  font-size: $type-size-5;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 0.25em;
+}
+
+.paper-authors,
+.paper-venue {
+  margin-bottom: 0.2em;
+}
+
+.paper-links a {
+  display: inline-block;
+  margin-right: 0.8em;
+
+  &::before { content: "["; color: var(--global-text-color-light); }
+  &::after  { content: "]"; color: var(--global-text-color-light); }
+}
+
+.paper-desc {
+  margin: 0.4em 0 0;
+  font-size: $type-size-6;
+}
+
+@media (max-width: 600px) {
+  .paper {
+    flex-direction: column;
+  }
+
+  .paper-media {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
