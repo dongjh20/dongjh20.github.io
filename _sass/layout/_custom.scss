@@ -147,15 +147,15 @@ a {
   text-align: center;
 }
 
-/* Sidebar visitor counter: "Total visitors: N" */
+/* Sidebar visitor counter: "Total Visitors: N", styled like the sidebar list items */
 .author__visitor-counter {
-  margin-top: 16px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--global-text-color-light);
+  margin-top: 12px;
+  text-align: left;
+  font-size: $type-size-6;
+  color: var(--global-text-color);
 
   .statcounter {
-    font-weight: 600;
-    color: var(--global-text-color);
+    color: inherit;
+    font-weight: inherit;
   }
 }
