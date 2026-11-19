@@ -149,7 +149,10 @@ a {
 
 /* Sidebar visitor counter: "Total Visitors: N", styled like the sidebar list items */
 .author__visitor-counter {
-  margin-top: 12px;
+  /* same rhythm as the list above: 0.5em gap, 2px padding, 1.5 line height */
+  margin-top: 0.5em;
+  padding: 2px 0;
+  line-height: 1.5;
   text-align: left;
   font-size: $type-size-6;
   color: var(--global-text-color);
