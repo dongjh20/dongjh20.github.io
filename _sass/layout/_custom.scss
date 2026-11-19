@@ -146,3 +146,16 @@ a {
 .page__footer-copyright {
   text-align: center;
 }
+
+/* Sidebar visitor counter: "Total visitors: N" */
+.author__visitor-counter {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--global-text-color-light);
+
+  .statcounter {
+    font-weight: 600;
+    color: var(--global-text-color);
+  }
+}
