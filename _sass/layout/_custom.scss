@@ -123,3 +123,21 @@ a {
   font-size: 19px;
   font-weight: 600;
 }
+
+/* Content links follow the same rule (the template underlines them by default) */
+.archive a,
+.page__content a,
+.author__urls a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+.archive .paper-links a:hover,
+.archive .paper-links a:focus {
+  text-decoration: none;
+}
