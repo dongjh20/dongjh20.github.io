@@ -77,7 +77,7 @@
         <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed ai-fw icon-pad-right"></i>PubMed</a></li>
       {% endif %}                        
       {% if author.researchgate %}
-        <li><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
+        <li><a href="{{ author.researchgate }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
       {% endif %}
       {% if author.scopus %}
         <li><a href="{{ author.scopus }}"><i class="ai ai-scopus ai-fw icon-pad-right"></i>Scopus</a></li>
@@ -189,11 +189,6 @@
       <li><a href="https://www.zhihu.com/people/{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
       {% endif %}      
     </ul>
-    
-    <!-- Visitor Map -->
-    <div class="author__visitor-map" style="margin-top: 10px; text-align: center;">
-      <img src="//clustrmaps.com/map_v2.png?d=dDj-xGA67d9Q2mjip_NNMEasi5aArV0ggIAF2RUWbN4&cl=ffffff&w=a" alt="Visitor Map" loading="lazy" style="max-width: 90%; height: auto;" />
-    </div>
 
     <!-- Statcounter -->
     <div class="author__visitor-counter" style="display: flex; justify-content: center; margin-top: 20px;">

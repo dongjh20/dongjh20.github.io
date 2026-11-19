@@ -1,87 +1,132 @@
 /* ==========================================================================
-   Publications list (/publications/)
+   Publications list (/publications/) — sizes follow wjiawei.com
    ========================================================================== */
 
 .pub-note {
-  font-size: $type-size-6;
+  margin: -6px 0 20px;
+  font-size: 15px;
   color: var(--global-text-color-light);
 }
 
 .pub-group {
-  margin: 1.5em 0;
+  margin-bottom: 28px;
 
   > summary {
     cursor: pointer;
-    font-size: $type-size-4;
-    font-weight: bold;
-    padding-bottom: 0.3em;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid var(--global-border-color);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    background: var(--global-footer-bg-color);
+    border: 1px solid var(--global-border-color);
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    user-select: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(-45deg);
+      transition: transform 0.15s ease;
+      flex: none;
+    }
+  }
+
+  &[open] > summary::before {
+    transform: rotate(45deg);
   }
 }
 
 .paper {
   display: flex;
-  gap: 1.2em;
-  align-items: flex-start;
-  padding: 1em 0;
-  border-bottom: 1px dashed var(--global-border-color);
-
-  &:last-child {
-    border-bottom: none;
-  }
+  gap: 24px;
+  padding: 20px;
+  margin-top: 14px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
 }
 
 .paper-media {
-  flex: 0 0 220px;
+  flex: 0 0 230px;
+  align-self: center;
 
   img,
   video {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
     border-radius: 6px;
-    border: 1px solid var(--global-border-color);
   }
 }
 
 .paper-body {
-  flex: 1 1 auto;
+  flex: 1;
   min-width: 0;
-  font-size: $type-size-6;
-  line-height: 1.5;
 }
 
 .paper-title {
   display: block;
-  font-size: $type-size-5;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 6px;
   text-decoration: none;
-  margin-bottom: 0.25em;
 }
 
-.paper-authors,
+.paper-authors {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+
+  strong {
+    color: var(--global-text-color);
+  }
+}
+
 .paper-venue {
-  margin-bottom: 0.2em;
+  margin-top: 4px;
+  font-size: 15.5px;
 }
 
-.paper-links a {
-  display: inline-block;
-  margin-right: 0.8em;
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
 
-  &::before { content: "["; color: var(--global-text-color-light); }
-  &::after  { content: "]"; color: var(--global-text-color-light); }
+  a {
+    padding: 2px 10px;
+    border: 1px solid var(--global-border-color);
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      border-color: var(--global-link-color);
+    }
+  }
 }
 
 .paper-desc {
-  margin: 0.4em 0 0;
-  font-size: $type-size-6;
+  margin: 10px 0 0;
+  font-size: 15.5px;
+  line-height: 1.6;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .paper {
     flex-direction: column;
+    gap: 14px;
+    padding: 16px;
   }
 
   .paper-media {

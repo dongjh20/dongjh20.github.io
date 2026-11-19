@@ -11,4 +11,32 @@
     await mermaid.run({querySelector:'code.language-mermaid'});
 </script>
 
+<!-- Open links to other sites in a new tab -->
+<script>
+  document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+    if (a.hostname !== location.hostname) {
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+    }
+  });
+</script>
+
+<!-- Publication videos: load and play only while on screen -->
+<script>
+  (function () {
+    var videos = document.querySelectorAll('video[data-lazy]');
+    if (!('IntersectionObserver' in window)) {
+      videos.forEach(function (v) { v.preload = 'auto'; v.play(); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.play().catch(function () {}); }
+        else { e.target.pause(); }
+      });
+    }, { rootMargin: '200px' });
+    videos.forEach(function (v) { io.observe(v); });
+  })();
+</script>
+
 <!-- end custom footer snippets -->

@@ -78,7 +78,7 @@ groups:
 
       - title: "STFC: Spatio-Temporal Formation Control for Connected and Autonomous Vehicles in Multi-Lane Traffic"
         url: "https://dongjh20.github.io/Vehicle-Formation/"
-        image: "https://dongjh20.github.io/Vehicle-Formation/static/images/website-exp-scenarioV4.jpg"
+        image: "https://dongjh20.github.io/Vehicle-Formation/static/images/formation-framework.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           <a href="https://wjiawei.com/">Jiawei Wang</a>,
@@ -98,8 +98,29 @@ groups:
 
   - title: "Multi-Robot Cooperation"
     papers:
+      - title: "Orchestrating Wheeled Mobile Robots Online without Conflicts"
+        url: "https://dongjh20.github.io/CFOO/"
+        video: "https://dongjh20.github.io/CFOO/static/videos/formation_navigation_four_panels.mp4"
+        authors: >-
+          <strong>Jianghong Dong</strong>,
+          <a href="https://scholar.google.com/citations?user=o9zHCC0AAAAJ">Yifeng Zhang</a>,
+          <a href="https://www.wenhancao.com/?lang=en">Wenhan Cao</a>,
+          <a href="https://wjiawei.com/">Jiawei Wang</a>,
+          <a href="https://scholar.google.com/citations?user=MlK35S4AAAAJ">Mengchi Cai</a>,
+          <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ">Keqiang Li</a>,
+          <a href="https://www.marmotlab.org/bio.html">Guillaume Sartoretti</a>
+        venue: "Preprint"
+        year: 2026
+        links:
+          - name: "arXiv"
+            url: "https://arxiv.org/abs/2605.18441"
+          - name: "project page"
+            url: "https://dongjh20.github.io/CFOO/"
+        desc: "CFOO, a conflict-free online orchestration framework for wheeled mobile robots that generates adaptive formations on the fly and computes trajectory-conflict-free robot-to-target assignments in polynomial time for smooth formation transitions."
+
       - title: "Distributed Formation Control for Car-Like Robots Navigating in Complex Environments"
         url: "https://ieeexplore.ieee.org/abstract/document/11072947"
+        image: "/images/publications/ICCAR-effect.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           <a href="https://wjiawei.com/">Jiawei Wang</a>,
@@ -118,7 +139,7 @@ groups:
     papers:
       - title: "From Optimizable to Interactable: Mixed Digital Twin-Empowered Testing of Vehicle-Infrastructure Cooperation Systems"
         url: "https://dongjh20.github.io/IMPACT/"
-        image: "https://dongjh20.github.io/IMPACT/static/images/platoon-setup.jpg"
+        video: "https://dongjh20.github.io/IMPACT/static/videos/real-vehicle-virtual-lightV2.mp4"
         authors: >-
           <strong>Jianghong Dong</strong>,
           Chunying Yang,
@@ -140,7 +161,7 @@ groups:
 
       - title: "Multisource Human-in-the-Loop Digital Twin Testbed for Connected and Autonomous Vehicles in Mixed Traffic Flow"
         url: "https://dongjh20.github.io/MSH-MCCT/"
-        image: "https://dongjh20.github.io/MSH-MCCT/static/images/MSH-snapshotV2.jpg"
+        image: "/images/publications/MSH-MCCT-fig2.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           Chunying Yang,
@@ -163,7 +184,7 @@ groups:
 
       - title: "Mixed Cloud Control Testbed: Validating Vehicle-Road-Cloud Integration via Mixed Digital Twin"
         url: "https://dongjh20.github.io/MCCT/"
-        image: "https://dongjh20.github.io/MCCT/resources/MCCT-architecture.jpg"
+        image: "https://dongjh20.github.io/MCCT/resources/experiment-A-V2.gif"
         authors: >-
           <strong>Jianghong Dong</strong>,
           <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>,

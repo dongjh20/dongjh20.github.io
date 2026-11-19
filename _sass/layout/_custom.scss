@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Site-specific overrides (typography follows wjiawei.com)
+   ========================================================================== */
+
+body {
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* Header: "Home" on the left, everything else pushed to the right */
+.masthead__inner-wrap {
+  font-family: $sans-serif;
+}
+
+.greedy-nav .visible-links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  li {
+    display: block;
+  }
+
+  /* first menu entry after "Home" starts the right-aligned group */
+  li.masthead__menu-item--lg + li {
+    margin-left: auto;
+  }
+
+  a {
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+.greedy-nav .visible-links .masthead__menu-item--lg a {
+  font-family: $header-font-family;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+/* Headings in page content */
+.page__title {
+  font-family: $header-font-family;
+  font-weight: 600;
+}
+
+.page__content h1,
+.page__content h2 {
+  font-family: $header-font-family;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.page__content h3 {
+  font-family: $sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+}
