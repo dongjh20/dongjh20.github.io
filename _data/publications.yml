@@ -2,16 +2,16 @@
 #
 # Each group has a title and a list of papers. Paper fields (all optional except title):
 #   title, url (title link), authors (HTML allowed; wrap yourself in <strong>),
-#   venue, year, image or video (thumbnail), links (list of {name, url}), desc.
+#   venue, year, image or video (+ poster) thumbnail — keep media small, under images/publications/, links (list of {name, url}), desc.
 # Markers: † equal contribution, * corresponding author.
 
 groups:
-  - title: "Multi-Vehicle Cooperation"
+  - title: "Multi-Vehicle Coordination"
     papers:
       - title: "Choreographing CAV Formations on the Fly with Reflection"
         url: "https://dongjh20.github.io/GRF-TAFC/"
-        video: "https://dongjh20.github.io/GRF-TAFC/static/videos/on-the-fly/07-shape-transformation.mp4"
-        poster: "https://dongjh20.github.io/GRF-TAFC/static/videos/on-the-fly/07-shape-transformation.jpg"
+        video: "/images/publications/GRF-TAFC.mp4"
+        poster: "/images/publications/GRF-TAFC.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           <a href="https://www.wenhancao.com/?lang=en">Wenhan Cao</a>,
@@ -34,7 +34,7 @@ groups:
 
       - title: "TOGIA: Task-Oriented Global-Interaction-Aware MARL Framework for Large-Scale Formation Control of CAVs"
         url: "https://dongjh20.github.io/TOGIA/"
-        image: "https://dongjh20.github.io/TOGIA/static/images/TOIA-framework-V2.jpg"
+        image: "/images/publications/TOGIA.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           <a href="https://scholar.google.com/citations?user=43xAy7MAAAAJ">Wenhan Cao</a>,
@@ -45,7 +45,7 @@ groups:
           <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>,
           <a href="https://www.researchgate.net/profile/Jianqiang-Wang">Jianqiang Wang</a>,
           <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ">Keqiang Li</a>
-        venue: "To appear"
+        venue: "In press"
         year: 2026
         links:
           - name: "project page"
@@ -54,7 +54,8 @@ groups:
 
       - title: "COIN: Collaborative Interaction-Aware Multi-Agent Reinforcement Learning for Self-Driving Systems"
         url: "https://marmotlab.github.io/COIN/"
-        video: "https://marmotlab.github.io/COIN/static/videos/6_inter_fade.mp4"
+        video: "/images/publications/COIN.mp4"
+        poster: "/images/publications/COIN.jpg"
         authors: >-
           <a href="https://scholar.google.com/citations?user=o9zHCC0AAAAJ">Yifeng Zhang</a>,
           <a href="https://scholar.google.com/citations?user=bmLr54AAAAAJ">Jieming Chen</a>,
@@ -78,7 +79,7 @@ groups:
 
       - title: "STFC: Spatio-Temporal Formation Control for Connected and Autonomous Vehicles in Multi-Lane Traffic"
         url: "https://dongjh20.github.io/Vehicle-Formation/"
-        image: "https://dongjh20.github.io/Vehicle-Formation/static/images/formation-framework.jpg"
+        image: "/images/publications/STFC.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           <a href="https://wjiawei.com/">Jiawei Wang</a>,
@@ -96,11 +97,12 @@ groups:
             url: "https://dongjh20.github.io/Vehicle-Formation/"
         desc: "A spatio-temporal formation control method that combines centralized formation generation with distributed trajectory planning, showing that interlaced structures are optimal for multi-lane formations."
 
-  - title: "Multi-Robot Cooperation"
+  - title: "Multi-Robot Coordination"
     papers:
       - title: "Orchestrating Wheeled Mobile Robots Online without Conflicts"
         url: "https://dongjh20.github.io/CFOO/"
-        video: "https://dongjh20.github.io/CFOO/static/videos/formation_navigation_four_panels.mp4"
+        video: "/images/publications/CFOO.mp4"
+        poster: "/images/publications/CFOO.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           <a href="https://scholar.google.com/citations?user=o9zHCC0AAAAJ">Yifeng Zhang</a>,
@@ -120,7 +122,7 @@ groups:
 
       - title: "Distributed Formation Control for Car-Like Robots Navigating in Complex Environments"
         url: "https://ieeexplore.ieee.org/abstract/document/11072947"
-        image: "/images/publications/ICCAR-effect.jpg"
+        image: "/images/publications/ICCAR.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           <a href="https://wjiawei.com/">Jiawei Wang</a>,
@@ -139,7 +141,8 @@ groups:
     papers:
       - title: "From Optimizable to Interactable: Mixed Digital Twin-Empowered Testing of Vehicle-Infrastructure Cooperation Systems"
         url: "https://dongjh20.github.io/IMPACT/"
-        video: "https://dongjh20.github.io/IMPACT/static/videos/real-vehicle-virtual-lightV2.mp4"
+        video: "/images/publications/IMPACT.mp4"
+        poster: "/images/publications/IMPACT.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           Chunying Yang,
@@ -184,7 +187,8 @@ groups:
 
       - title: "Mixed Cloud Control Testbed: Validating Vehicle-Road-Cloud Integration via Mixed Digital Twin"
         url: "https://dongjh20.github.io/MCCT/"
-        image: "https://dongjh20.github.io/MCCT/resources/experiment-A-V2.gif"
+        video: "/images/publications/MCCT.mp4"
+        poster: "/images/publications/MCCT.jpg"
         authors: >-
           <strong>Jianghong Dong</strong>,
           <a href="https://scholar.google.com/citations?user=7XuJsS8AAAAJ">Qing Xu</a>,

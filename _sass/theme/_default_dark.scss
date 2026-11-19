@@ -36,21 +36,23 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Dark theme for the site */
 html[data-theme="dark"] {
-    --global-base-color                 : #{$primary-color};
-    --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
-    --global-border-color               : #{$light-gray};
-    --global-dark-border-color          : #{$background-light};
+    /* dark counterpart of the wjiawei.com palette */
+    --global-base-color                 : #9cc3ff;
+    --global-bg-color                   : #16191d;
+    --global-footer-bg-color            : #1e2227;
+    --global-border-color               : #333a42;
+    --global-dark-border-color          : #4a525c;
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : #{$light-gray};
-    --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
-    --global-link-color-visited         : #{$link-light};
-    --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$primary-color};
-    --global-text-color                 : #{$text};
-    --global-text-color-light           : #f3f3f3;
+    --global-fig-caption-color          : #a3adb8;
+    --global-link-color                 : #7fb2ff;
+    --global-link-color-hover           : #f0a24a;
+    --global-link-color-visited         : #7fb2ff;
+    --global-masthead-link-color        : #a3adb8;
+    --global-masthead-link-color-hover  : #e6e8eb;
+    --global-text-color                 : #e6e8eb;
+    --global-text-color-light           : #a3adb8;
     --global-thead-color                : #{$background-lighter};
+    --global-accent-color               : #ff6b6b;
 }
 

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Site-specific overrides (typography follows wjiawei.com)
+   Site-specific overrides (typography and colors follow wjiawei.com)
    ========================================================================== */
 
 body {
@@ -11,9 +11,28 @@ strong {
   font-weight: 600;
 }
 
-/* Header: "Home" pinned on the left, the other links right-aligned.
-   The list keeps its natural width so the greedy-nav script can still
-   measure it and collapse items into the menu button on narrow screens. */
+/* Links: no underline at rest, underline + warm hover color on hover */
+a {
+  color: var(--global-link-color);
+  text-decoration: none;
+
+  &:visited {
+    color: var(--global-link-color-visited);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--global-link-color-hover);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Header: every item (Home, Publications, Teaching, Blog, theme toggle)
+   right-aligned. The list keeps its natural width so the greedy-nav script
+   can still measure it and fold items into the menu button on narrow screens.
+   -------------------------------------------------------------------------- */
 .masthead__inner-wrap {
   font-family: $sans-serif;
 }
@@ -27,23 +46,54 @@ strong {
 .greedy-nav .visible-links {
   display: flex;
   align-items: center;
-  padding-left: 90px; /* room reserved for "Home" */
 
   li {
     display: block;
-  }
 
-  li.masthead__menu-item--lg {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    &:first-child {
+      font-weight: inherit;
+
+      a {
+        margin-left: 1rem;
+      }
+    }
   }
 
   a {
     font-size: 15px;
     font-weight: 500;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
+}
+
+.masthead__menu-item--lg {
+  padding-right: 0;
+  font-weight: inherit;
+}
+
+.greedy-nav a {
+  color: var(--global-masthead-link-color);
+
+  &:visited {
+    color: var(--global-masthead-link-color);
+  }
+
+  &:hover {
+    color: var(--global-masthead-link-color-hover);
+  }
+}
+
+.masthead__menu-item.selected a,
+.masthead__menu-item.selected a:visited,
+.masthead__menu-item.selected a:hover {
+  color: var(--global-base-color);
+  font-weight: 600;
+  border-bottom-color: var(--global-base-color);
 }
 
 /* keep the right-aligned links clear of the menu button when it shows */
@@ -51,16 +101,13 @@ strong {
   margin-right: 40px;
 }
 
-.greedy-nav .visible-links .masthead__menu-item--lg a {
-  font-family: $header-font-family;
-  font-size: 19px;
-  font-weight: 600;
-}
-
-/* Headings in page content */
+/* --------------------------------------------------------------------------
+   Headings in page content
+   -------------------------------------------------------------------------- */
 .page__title {
   font-family: $header-font-family;
   font-weight: 600;
+  color: var(--global-base-color);
 }
 
 .page__content h1,
@@ -68,6 +115,7 @@ strong {
   font-family: $header-font-family;
   font-size: 27px;
   font-weight: 600;
+  color: var(--global-base-color);
 }
 
 .page__content h3 {

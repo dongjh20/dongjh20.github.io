@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-<p class="pub-note">* corresponding author &nbsp;·&nbsp; See <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a> for the full list.</p>
+<p class="pub-note"><span class="pub-mark">*</span> corresponding author &nbsp;·&nbsp; See <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a> for the full list.</p>
 
 {% for group in site.data.publications.groups %}
 <details class="pub-group" open>
@@ -18,7 +18,7 @@ author_profile: true
     <div class="paper-media">
       {% if paper.video %}
       {% assign vsrc = paper.video %}{% unless vsrc contains "://" %}{% assign vsrc = vsrc | prepend: base_path %}{% endunless %}
-      <video muted loop playsinline preload="metadata" data-lazy{% if paper.poster %} poster="{{ paper.poster }}"{% endif %}><source src="{{ vsrc }}" type="video/mp4"></video>
+      <video muted loop playsinline preload="metadata" data-lazy{% if paper.poster %} poster="{% if paper.poster contains "://" %}{{ paper.poster }}{% else %}{{ base_path }}{{ paper.poster }}{% endif %}"{% endif %}><source src="{{ vsrc }}" type="video/mp4"></video>
       {% else %}
       {% assign isrc = paper.image %}{% unless isrc contains "://" %}{% assign isrc = isrc | prepend: base_path %}{% endunless %}
       <img src="{{ isrc }}" alt="{{ paper.title }}" loading="lazy">
@@ -27,7 +27,7 @@ author_profile: true
     {% endif %}
     <div class="paper-body">
       {% if paper.url %}<a class="paper-title" href="{{ paper.url }}" target="_blank" rel="noopener">{{ paper.title }}</a>{% else %}<span class="paper-title">{{ paper.title }}</span>{% endif %}
-      <div class="paper-authors">{{ paper.authors | replace: '<a ', '<a target="_blank" rel="noopener" ' }}</div>
+      <div class="paper-authors">{{ paper.authors | replace: '<a ', '<a target="_blank" rel="noopener" ' | replace: '*', '<span class="pub-mark" title="Corresponding author">*</span>' }}</div>
       <div class="paper-venue"><em>{{ paper.venue }}</em>{% if paper.year %}, {{ paper.year }}{% endif %}</div>
       {% if paper.links %}
       <div class="paper-links">
