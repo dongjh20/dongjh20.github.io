@@ -11,29 +11,44 @@ strong {
   font-weight: 600;
 }
 
-/* Header: "Home" on the left, everything else pushed to the right */
+/* Header: "Home" pinned on the left, the other links right-aligned.
+   The list keeps its natural width so the greedy-nav script can still
+   measure it and collapse items into the menu button on narrow screens. */
 .masthead__inner-wrap {
   font-family: $sans-serif;
+}
+
+#site-nav.greedy-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .greedy-nav .visible-links {
   display: flex;
   align-items: center;
-  width: 100%;
+  padding-left: 90px; /* room reserved for "Home" */
 
   li {
     display: block;
   }
 
-  /* first menu entry after "Home" starts the right-aligned group */
-  li.masthead__menu-item--lg + li {
-    margin-left: auto;
+  li.masthead__menu-item--lg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   a {
     font-size: 15px;
     font-weight: 500;
   }
+}
+
+/* keep the right-aligned links clear of the menu button when it shows */
+.greedy-nav button:not(.hidden) + .visible-links {
+  margin-right: 40px;
 }
 
 .greedy-nav .visible-links .masthead__menu-item--lg a {
