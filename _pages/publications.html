@@ -26,7 +26,11 @@ author_profile: true
     </div>
     {% endif %}
     <div class="paper-body">
-      {% if paper.url %}<a class="paper-title" href="{{ paper.url }}" target="_blank" rel="noopener">{{ paper.title }}</a>{% else %}<span class="paper-title">{{ paper.title }}</span>{% endif %}
+      {% comment %} Title links to the official paper, then arXiv, then the paper's own url (project page). {% endcomment %}
+      {% assign paper_link = nil %}{% assign arxiv_link = nil %}
+      {% for link in paper.links %}{% if link.name == "paper" %}{% assign paper_link = link.url %}{% elsif link.name == "arXiv" %}{% assign arxiv_link = link.url %}{% endif %}{% endfor %}
+      {% assign title_url = paper_link | default: arxiv_link | default: paper.url %}
+      {% if title_url %}<a class="paper-title" href="{{ title_url }}" target="_blank" rel="noopener">{{ paper.title }}</a>{% else %}<span class="paper-title">{{ paper.title }}</span>{% endif %}
       <div class="paper-authors">{{ paper.authors | replace: '<a ', '<a target="_blank" rel="noopener" ' | replace: '*', '<span class="pub-mark" title="Corresponding author">*</span>' }}</div>
       <div class="paper-venue"><em>{{ paper.venue }}</em>{% if paper.year %}, {{ paper.year }}{% endif %}</div>
       {% if paper.links %}

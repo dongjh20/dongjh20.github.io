@@ -1,7 +1,7 @@
 # Publication list rendered on /publications/ (see _pages/publications.html).
 #
 # Each group has a title and a list of papers. Paper fields (all optional except title):
-#   title, url (title link), authors (HTML allowed; wrap yourself in <strong>),
+#   title, url (project page; the title links to the "paper" link, else "arXiv", else this url), authors (HTML allowed; wrap yourself in <strong>),
 #   venue, year, image or video (+ poster) thumbnail — keep media small, under images/publications/, links (list of {name, url}), desc.
 # Markers: † equal contribution, * corresponding author.
 

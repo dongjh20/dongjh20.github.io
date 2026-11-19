@@ -8,10 +8,10 @@
   color: var(--global-text-color);
 }
 
-/* corresponding-author marker */
+/* corresponding-author marker: same color as body text, just bolder */
 .pub-mark {
-  color: var(--global-accent-color);
-  font-weight: 700;
+  color: var(--global-text-color);
+  font-weight: 600;
   margin-left: 1px;
 }
 
